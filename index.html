@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Feliz Aniversário!</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <section class="hero" id="hero-section">
+        <div class="hero-content">
+            <h1 class="glow-text">FELIZ ANIVERSÁRIO, <br>MEU BEM <i class="fa-solid fa-heart"></i></h1>
+            <p class="hero-desc">Para minha pessoa favorita !</p>
+            <div class="scroll-arrow" id="btn-start">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery hidden" id="gallery-section">
+        <h2 class="glow-text">MEMORIES</h2>
+        <div class="polaroid-grid" id="gallery-container"></div>
+        
+        <div class="scroll-arrow" id="btn-show-terminal" style="margin-top: 50px;">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="shell hidden" id="terminal-section">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-title">Terminal - eduardo@xubuntu: ~</div>
+                <div class="terminal-buttons">
+                    <span class="dot close"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="dot minimize"><i class="fa-solid fa-minus"></i></span>
+                    <span class="dot maximize"><i class="fa-solid fa-square"></i></span>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div id="terminal-history">
+                    <p>Welcome to Xubuntu 24.04 LTS (GNU/Linux 6.8.0-generic)</p>
+                    <br>
+                </div>
+                <div class="input-line">
+                    <span class="prompt">eduardo@xubuntu:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

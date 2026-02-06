@@ -1,0 +1,241 @@
+:root {
+  --primary-color: #a044ff;
+  --glow-color: rgba(160, 68, 255, 0.8);
+  --bg-dark: #0a0a0a;
+  --terminal-bg: #2c2c2c;
+}
+
+/* Reset básico */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  overflow-x: hidden;
+  color: white;
+  font-family: 'JetBrains Mono', monospace; 
+}
+
+/* Fundo de Partículas */
+#particles-js { 
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  z-index: 1; 
+}
+
+/* Utilitários */
+.hidden { display: none !important; }
+
+section { 
+  position: relative; 
+  z-index: 10; 
+  width: 100%; 
+  min-height: 100vh;
+}
+
+/* --- 1ª SESSÃO: HERO --- */
+.hero { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  padding: 20px;
+}
+
+.glow-text {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--primary-color);
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Animação da Seta */
+.scroll-arrow {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    transition: 0.3s;
+}
+
+.scroll-arrow:hover {
+    color: white;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+}
+
+/* --- 2ª SESSÃO: GALERIA --- */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.polaroid-container { 
+    width: 220px; 
+    height: 280px; 
+    perspective: 1000px; 
+    cursor: pointer; 
+    margin: auto; 
+}
+
+.polaroid-inner { 
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+    transform-style: preserve-3d; 
+    transform: rotate(calc(var(--r) * 1deg)); 
+}
+
+.flipped .polaroid-inner { transform: rotateY(180deg); }
+
+.polaroid-front, .polaroid-back {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    backface-visibility: hidden;
+    background: white; 
+    border: 10px solid white; 
+    border-bottom: 45px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.polaroid-front img { width: 100%; height: 100%; object-fit: cover; }
+
+.polaroid-back { 
+    transform: rotateY(180deg); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #333; 
+    font-family: 'Permanent Marker', cursive; 
+    text-align: center; 
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* --- 3ª SESSÃO: TERMINAL --- */
+.shell { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 40px 20px;
+}
+
+.terminal-window { 
+    width: 100%; 
+    max-width: 700px; 
+    background: var(--terminal-bg); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7); 
+    border: 1px solid #444;
+}
+
+.terminal-header {
+    background: #3d3d3d;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+.terminal-title {
+    font-size: 0.8rem;
+    color: #ccc;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.terminal-buttons .btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 2px; 
+}
+
+
+.minimize { background: #666; } 
+.maximize { background: #666; } 
+.close { background: #e81123; } 
+
+.terminal-buttons .btn:hover {
+    filter: brightness(1.2);
+}
+
+
+.terminal-buttons i {
+    pointer-events: none;
+}
+
+.terminal-body { 
+    padding: 20px; 
+    height: 350px; 
+    overflow-y: auto; 
+    color: #50fa7b; 
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Custom Scrollbar para o Terminal */
+.terminal-body::-webkit-scrollbar { width: 6px; }
+.terminal-body::-webkit-scrollbar-track { background: #1a1a1a; }
+.terminal-body::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+
+.input-line { display: flex; gap: 10px; align-items: center; }
+.prompt { color: #bd93f9; font-weight: bold; }
+
+#terminal-input { 
+    background: transparent; 
+    border: none; 
+    outline: none; 
+    color: #f1fa8c; 
+    flex: 1; 
+    font-family: 'JetBrains Mono', monospace; 
+    font-size: 0.95rem;
+}
+
+pre { font-family: inherit; margin: 10px 0; }
