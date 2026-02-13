@@ -31,18 +31,18 @@ document.getElementById('btn-show-terminal').addEventListener('click', () => {
 
 // 2. Gerador da Galeria com suas fotos reais
 const dadosGaleria = [
-    { src: "fotos/foto dele.JPG", frase: "Admiro sua determinação e o foco que você coloca em tudo o que ama !" },
-    { src: "fotos/pontos turisticos.JPG", frase: "Nosso compromisso" },
-    { src: "fotos/nosso beijo.JPG", frase: "Primeiro de muitos anos!" },
+    { src: "fotos/foto dele.jpg", frase: "Admiro sua determinação e o foco que você coloca em tudo o que ama !" },
+    { src: "fotos/pontos turisticos.jpg", frase: "Nosso compromisso" },
+    { src: "fotos/nosso beijo.jpg", frase: "Primeiro de muitos anos!" },
     { src: "fotos/café.jpeg", frase: "Nossas pausas favoritas" },
-    { src: "fotos/casal.JPG", frase: "Um ser amoroso, cuidadoso e maravilhoso !" },
-    { src: "fotos/diversao.JPG", frase: "Nossos momentos juntos." },
+    { src: "fotos/casal.jpg", frase: "Um ser amoroso, cuidadoso e maravilhoso !" },
+    { src: "fotos/diversao.jpg", frase: "Nossos momentos juntos." },
     { src: "fotos/foto dele no trabalho.JPG", frase: "Você é um profissional incrível!" },
-    { src: "fotos/momentos.JPG", frase: "Nós dois contra o mundo." },
-    { src: "fotos/evento.JPG", frase: "Meu parceiro de eventos !" },
-    { src: "fotos/familia.JPG", frase: "Nossas diferenças só mostram como o respeito e o amor podem construir algo perfeito." },
-    { src: "fotos/ano novo.JPG", frase: "Como vc sempre diz : Somos Perfeitos, e vamos conquistar muitas coisas juntos ainda ! " },
-    { src: "fotos/foto minha.JPG", frase: "Com todo o meu amor, para a minha pessoa favorita no mundo." }
+    { src: "fotos/momentos.jpg", frase: "Nós dois contra o mundo." },
+    { src: "fotos/evento.jpg", frase: "Meu parceiro de eventos !" },
+    { src: "fotos/familia.jpg", frase: "Nossas diferenças só mostram como o respeito e o amor podem construir algo perfeito." },
+    { src: "fotos/ano novo.jpg", frase: "Como vc sempre diz : Somos Perfeitos, e vamos conquistar muitas coisas juntos ainda ! " },
+    { src: "fotos/foto minha.jpg", frase: "Com todo o meu amor, para a minha pessoa favorita no mundo." }
 ];
 
 const galleryContainer = document.getElementById('gallery-container');
