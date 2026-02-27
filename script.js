@@ -37,7 +37,7 @@ const dadosGaleria = [
     { src: "fotos/café.jpeg", frase: "Nossas pausas favoritas" },
     { src: "fotos/casal.jpg", frase: "Um ser amoroso, cuidadoso e maravilhoso !" },
     { src: "fotos/diversao.jpg", frase: "Nossos momentos juntos." },
-    { src: "fotos/foto dele no trabalho.JPG", frase: "Você é um profissional incrível!" },
+    { src: "fotos/foto dele no trabalho.jpg", frase: "Você é um profissional incrível!" },
     { src: "fotos/momentos.jpg", frase: "Nós dois contra o mundo." },
     { src: "fotos/evento.jpg", frase: "Meu parceiro de eventos !" },
     { src: "fotos/familia.jpg", frase: "Nossas diferenças só mostram como o respeito e o amor podem construir algo perfeito." },
